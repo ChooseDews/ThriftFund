@@ -1,6 +1,6 @@
 primary-nav {
 	height: 50px;
-	width: 100%;
+	width: 100vw;
 	background-color: #2196F3;
 	display: block;
 	color: white;
@@ -46,7 +46,7 @@ secondary-nav {
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
-	width: 100%;
+	width: 100vw;
 	background-color: #1976D2;
 	display: block;
 	color: white;

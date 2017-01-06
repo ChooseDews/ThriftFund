@@ -1,0 +1,15 @@
+.listing img{
+	width: 100%;
+	border-top-left-radius: 40px;
+}
+
+.listing {
+	display: block;
+	border-top-left-radius: 40px;
+	margin: 20px;
+}
+
+.listing .content{
+	padding: 20px;
+	background: white;
+}
