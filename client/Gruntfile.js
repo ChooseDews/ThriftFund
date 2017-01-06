@@ -23,6 +23,13 @@ module.exports = function(grunt) {
 
 
   grunt.initConfig({
+    copy: {
+      index: {
+        expand: false,
+        src: 'src/index.html',
+        dest: 'dist/index.html'
+      }
+    },
     ngtemplates: {
       app: {
         src: '**/**.view.html',
