@@ -1,0 +1,119 @@
+primary-nav {
+	height: 50px;
+	width: 100%;
+	background-color: #2196F3;
+	display: block;
+	color: white;
+	text-align: center;
+	position: fixed;
+	z-index: 40;
+}
+
+primary-nav-fill {
+	height: 50px;
+	width: 100%;
+	display: block;
+}
+
+ .brand{
+	font-size: 1.5em;
+	line-height: 50px;
+	display: inline;
+	font-family: 'Oswald', sans-serif;
+}
+primary-nav i{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+ .brand low{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+}
+
+primary-nav i.left{
+	float: left;
+	line-height: 50px;
+}
+primary-nav i.right{
+	float: right;
+	line-height: 50px;
+
+}
+
+
+secondary-nav {
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	width: 100%;
+	background-color: #1976D2;
+	display: block;
+	color: white;
+}
+
+nav-overlay {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #074665;
+	opacity: 0.99;
+	z-index: 100;
+	display: block;
+	text-align: center;
+	padding-top: 25vh;
+}
+nav-overlay item:nth-child(2) {
+	border-top: solid white 1px;
+
+}
+
+nav-overlay .brand-container {
+	color: white;
+	position: absolute;
+	margin-top: 50px;
+	top: 0;
+	width: 100%;
+	left: 0;
+}
+
+nav-overlay {
+  -webkit-animation-duration: 0.5s !important;
+	-webkit-animation-delay: 0s !important;
+
+}
+
+nav-overlay .brand {
+	color: white;
+	padding: 10px;
+	border: solid white 1px;
+	top: 0;
+	font-size: 2.5em;
+}
+
+nav-overlay item{
+	color: white;
+	display: block;
+	font-size: 2em;
+	font-family: 'Oswald', sans-serif;
+	padding: 20px;
+	border-bottom: solid white 1px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+
+footer {
+	display: none;
+	height: 50px;
+	background-color: #0063b1;
+	color: white;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+}

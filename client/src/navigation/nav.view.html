@@ -1,0 +1,40 @@
+<primary-nav>
+    <i class="material-icons left" ng-click="toggleNav()">menu</i>
+    <div class="brand">
+        <low>thrift</low>Fund
+    </div>
+    <i class="material-icons right">add_circle</i>
+</primary-nav>
+<primary-nav-fill></primary-nav-fill>
+
+<secondary-nav>
+
+Recent Listings
+
+</secondary-nav>
+
+<nav-overlay class="animated fadeInDownBig" ng-show="showNav" ng-click="toggleNav()">
+    <div class="brand-container">
+
+        <div class="brand">
+            <low>thrift</low>Fund
+        </div>
+
+    </div>
+
+    <item>Listings</item>
+    <item>Donate</item>
+    <item>Register</item>
+    <item>Login</item>
+
+</nav-overlay>
+
+<div ui-view></div>
+
+<footer>
+
+    <div class="brand">
+        <low>thrift</low>Fund
+    </div>
+
+</footer>

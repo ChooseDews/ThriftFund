@@ -1,7 +1,9 @@
 # Custom to application
 
 client/dist
-
+client/cordova/platforms/ios
+client/cordova/plugins
+client/cordova/www
 
 
 # Logs
