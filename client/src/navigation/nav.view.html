@@ -4,7 +4,7 @@
     <div class="brand">
         <low>thrift</low>Fund
     </div>
-    <i ui-sref="home" ng-show="$state.current.name == 'new' || $state.current.name == 'item'" class="material-icons right">view_list</i>
+    <i ui-sref="home" ng-show="$state.current.name == 'new' || $state.current.name == 'item'" class="material-icons right">list</i>
     <i ui-sref="new" ng-show="$state.current.name != 'new' && $state.current.name != 'item'" class="material-icons right">add_circle</i>
 </primary-nav>
 <primary-nav-fill></primary-nav-fill>
@@ -23,6 +23,8 @@
     <item ui-sref="new">Donate</item>
     <item ui-sref="register" ng-hide="$auth.user._id">Register</item>
     <item ui-sref="login" ng-hide="$auth.user._id">Login</item>
+    <item ui-sref="wishlist" ng-show="$auth.user._id">Wishlist</item>
+
     <item ng-click="$auth.logout()" ng-show="$auth.user._id">Logout</item>
 
 

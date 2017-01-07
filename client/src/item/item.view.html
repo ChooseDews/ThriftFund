@@ -23,7 +23,16 @@
   </div>
   <div class="discription  mui--z2">
     {{item.description}}
+
+    <div class="center" ng-show="$auth.user.wishlist.indexOf(item._id) == -1">
+      <br><br>
+      <button ng-click="add()" class="mui-btn mui-btn--raised mui-btn--primary">Add To Wishlist</button>
+    </div>
+
   </div>
+
+
+
 
   <div class="comments">
 

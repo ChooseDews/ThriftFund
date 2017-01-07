@@ -1,7 +1,7 @@
 
 
 
-angular.module('app').controller('itemController', function($scope, $listing, $state, $auth) {
+angular.module('app').controller('itemController', function($scope, $listing, $state, $auth, $wishlist) {
 
 
   var itemId = $state.params.itemId;
@@ -18,6 +18,12 @@ angular.module('app').controller('itemController', function($scope, $listing, $s
 
     });
   };
+
+  $scope.add = function(){
+    $wishlist.add(itemId).then(function(user){
+      console.log(user);
+    });
+  }
 
 
 

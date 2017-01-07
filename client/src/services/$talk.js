@@ -1,5 +1,8 @@
 angular.module('app').factory('$talk', function($http, $state){
-  var apiUrl = 'http://thift.fund/api/';
+  alert(apiUrl);
+  if(!apiUrl){
+    var apiUrl = 'http://localhost:3000/api/';
+  }
   var errorHandler = function(response){
      if(response.status === 401 && !$state.is('login') && !$state.is('register')){
        //if(localStorage.token) localStorage.removeItem('token');

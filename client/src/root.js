@@ -46,6 +46,12 @@ angular.module('app', [
     parent: navigation
   })
 
+  .state('wishlist', {
+    url: "/wishlist",
+    templateUrl: "wishlist/wishlist",
+    parent: navigation
+  })
+
   .state('item', {
     url: "/item/:itemId",
     templateUrl: "item/item",
@@ -55,10 +61,12 @@ angular.module('app', [
 
 
 })
-.controller('rootController', function($scope, $rootScope, $state, $auth) {
+.controller('rootController', function($scope, $rootScope, $state, $auth, $wishlist) {
 
   $rootScope.$state = $state;
   $rootScope.$auth = $auth;
+  $rootScope.$wishlist = $wishlist;
+
 
   $auth.attempt();
 

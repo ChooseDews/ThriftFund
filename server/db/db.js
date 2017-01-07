@@ -26,7 +26,8 @@ var user = Schema({
     last: String
   },
   password: String,
-  username: String
+  username: String,
+  wishlist: [{ type: Schema.Types.ObjectId, ref: 'Listings' }]
 });
 
 user.methods.generateHash = function(password) {

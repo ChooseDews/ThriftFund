@@ -8,7 +8,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/me', Auth.authMiddle, function(req, res, next) {
-  res.send(req.user);
+  Auth.getUser(req.user.username).then(function(user){
+    res.send(user);
+  });
 });
 
 router.post('/login', function(req, res, next){

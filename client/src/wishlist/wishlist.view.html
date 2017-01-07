@@ -1,0 +1,46 @@
+<div ng-controller="wishlistController">
+
+
+	<div>
+
+
+
+
+<secondary-nav>
+
+Wishlist
+</secondary-nav>
+
+
+
+<div ng-repeat="listing in listings">
+
+
+	<div class='wishlist mui--z1' ui-sref="item({itemId: listing._id})">
+
+
+	<div class="title">
+		{{listing.name | limitTo:20 }} <condition>{{listing.condition }}</condition>
+		<span class="commentCount">{{listing.comments.length}} <i class="material-icons">comment</i></span>
+	</div>
+	<p class="content">
+
+	{{ listing.description | limitTo:80 }}...
+
+	</p>
+
+
+
+	</div>
+
+</div>
+
+
+
+
+
+
+	</div>
+
+
+</div>

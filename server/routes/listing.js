@@ -30,7 +30,6 @@ router.get('/:itemId', function(req, res, next) {
 
 router.post('/', Auth.authMiddle, function(req,res,next){
   var listing = req.body;
-  console.log(listing)
   var l = Listing.createListing(listing.name, listing.description, listing.condition, listing.price);
   var file = Images.process64(listing.image, l._id);
   l.images.push(file);
