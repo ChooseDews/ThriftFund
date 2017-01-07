@@ -28,7 +28,18 @@ angular.module('app').factory('$auth', function($http, $talk, $state){
       });
     },
     register: function(user){
-      return $talk.post('auth/register', user);
+      var self = this;
+
+      return $talk.post('auth/register', user).then(function(user){
+        if(user._id && user.token){
+          self.user = user;
+          self.storeToken(user.token);
+          console.log(user);
+          $state.go('home')
+        }else{
+          throw user;
+        }
+      });
     },
     login: function(username, password){
       var self = this;

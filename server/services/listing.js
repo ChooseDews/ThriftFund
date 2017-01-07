@@ -17,7 +17,8 @@ exports.createComment = function(listingId, comment, user){
   var comment = new db.Comments({
     listing: listingId,
     comment: comment,
-    username: 'jddf99'
+    username: user.username,
+    user: user._id
   });
   return comment.save().then(function(comment){
     return db.Listings.findById(listingId)

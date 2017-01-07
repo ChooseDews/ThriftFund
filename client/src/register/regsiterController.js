@@ -7,11 +7,9 @@ $scope.error = '';
 
 $scope.register = function(user){
 
-$auth.register(user).then(function(data){
-  if(!data._id){
-    $scope.error = data;
-  }
-})
+$auth.register(user).catch(function(e){
+  $scope.error = e;
+});
 
 
 };

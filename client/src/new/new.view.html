@@ -1,11 +1,37 @@
-<div ng-controller="newController">
-
 
 <secondary-nav>
 
-Donate Something
+Donate An Item
 
 </secondary-nav>
+
+<div ng-controller="newController" ng-if="!$auth.user._id">
+
+
+
+  <mui-panel style="margin: 0;">
+
+<div class="new-unauthed">
+
+
+<i class="material-icons">add_shopping_cart</i>
+    <p>    You must login or register a new account to donate an item.
+</p>
+
+<button class="mui-btn mui-btn--raised mui-btn--primary" ui-sref="login">Login</button>
+ <button class="mui-btn mui-btn--raised" ui-sref="register">register</button>
+
+</div>
+</mui-panel>
+
+
+</div>
+
+
+
+
+<div ng-controller="newController" ng-if="$auth.user._id">
+
 
 <div class="picturePlaceholder">
 <img id=image src="image.jpg" alt="">

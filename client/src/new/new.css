@@ -24,3 +24,22 @@ img {
   font-size: 7em;
   color: grey;
 }
+
+.new-unauthed{
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.new-unauthed p{
+
+  font-family: 'Open Sans', sans-serif;
+
+
+}
+
+.new-unauthed i{
+
+  font-size: 10em;
+  color: grey
+
+}

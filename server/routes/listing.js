@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var Listing = require('./../services/listing.js');
 var Images = require('./../services/images.js');
+var Auth = require('./../services/authentication.js');
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   Listing.getListings().then(function(listings){
@@ -10,10 +12,11 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.post('/comment', function(req, res, next) {
+router.post('/comment', Auth.authMiddle, function(req, res, next) {
   var itemId = req.body.itemId;
   var comment = req.body.comment;
-  Listing.createComment(itemId, comment).then(function(comment){
+  var user = req.user;
+  Listing.createComment(itemId, comment, user).then(function(comment){
     res.send(comment);
   });
 });
@@ -25,7 +28,7 @@ router.get('/:itemId', function(req, res, next) {
 });
 
 
-router.post('/', function(req,res,next){
+router.post('/', Auth.authMiddle, function(req,res,next){
   var listing = req.body;
   console.log(listing)
   var l = Listing.createListing(listing.name, listing.description, listing.condition, listing.price);

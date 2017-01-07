@@ -1,7 +1,7 @@
 
 
 
-angular.module('app').controller('itemController', function($scope, $listing, $state) {
+angular.module('app').controller('itemController', function($scope, $listing, $state, $auth) {
 
 
   var itemId = $state.params.itemId;

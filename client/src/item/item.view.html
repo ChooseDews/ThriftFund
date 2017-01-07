@@ -24,7 +24,12 @@
     <comment ng-repeat="comment in item.comments"><b>{{comment.username}}</b> {{comment.comment}}</comment>
 
 
-<form ng-submit="createComment(comment)">
+<div class="center" ng-hide="$auth.user._id">
+  <button ui-sref="login" class="mui-btn mui-btn--raised mui-btn--primary">Login to Comment</button>
+
+</div>
+
+<form ng-submit="createComment(comment)" ng-show="$auth.user._id">
 
 
     <div class="mui-textfield">
