@@ -3,7 +3,7 @@ angular.module('app', [
  // 'ngSanitize',
   'mui',
  // 'ngTouch',
- // 'ng-fastclick',
+  'ng-fastclick',
  // 'angularValidator',
  // 'uiGmapgoogle-maps',
  // 'firebase',

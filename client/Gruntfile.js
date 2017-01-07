@@ -15,6 +15,7 @@ module.exports = function(grunt) {
         'bower_components/mui/packages/cdn/js/mui.min.js',
         'bower_components/mui/packages/cdn/angular/mui-angular.min.js',
         'bower_components/cropper/dist/cropper.min.js',
+        'bower_components/ng-fastclick/dist/index.min.js',
 
 
 
@@ -182,7 +183,7 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask('default', ['clean','ngtemplates', 'concat_css', 'concat', 'copy', 'connect', 'watch']);
-    grunt.registerTask('compile', ['ngtemplates', 'concat_css', 'concat:library', 'concat:app', 'removelogging', 'concat:together', 'uglify', 'cssmin', 'copy']);
+    grunt.registerTask('compile', ['clean', 'ngtemplates', 'concat_css', 'concat:library', 'concat:app', 'removelogging', 'concat:together', 'uglify', 'cssmin', 'copy']);
 
 
 };

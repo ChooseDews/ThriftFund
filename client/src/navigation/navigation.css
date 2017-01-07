@@ -7,13 +7,34 @@ primary-nav {
 	text-align: center;
 	position: fixed;
 	z-index: 40;
+	top: 0;
 }
+
 
 primary-nav-fill {
 	height: 50px;
 	width: 100%;
 	display: block;
 }
+
+.platform-ios top-bar{
+	height: 20px;
+	width: 100%;
+	display: block;
+	z-index: 39;
+	position: fixed;
+	top: 0;
+	background-color: #2196F3;
+}
+
+.platform-ios primary-nav{
+	top: 15px;
+}
+
+.platform-ios primary-nav-fill{
+	height: 65px;
+}
+
 
  .brand{
 	font-size: 1.5em;

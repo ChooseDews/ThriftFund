@@ -2,7 +2,8 @@ var db = {};
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/thiftfund');
+var config = require('./../config.js');
+mongoose.connect(config.db);
 var Schema = mongoose.Schema;
 
 
