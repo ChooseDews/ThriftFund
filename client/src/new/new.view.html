@@ -7,27 +7,39 @@ Donate Something
 
 </secondary-nav>
 
+<div class="picturePlaceholder">
+<img id=image src="image.jpg" alt="">
+</div>
 
-<mui-panel>
+
+
+<mui-panel style="margin: 0;">
 
   <form>
-    <mui-input ng-model="inputA" float-label label="Item Name"></mui-input>
-    <mui-select ng-model="inputF" name="inputA" float-label label="Item Condition" use-default>
-  <mui-option value="option-1" label="Like New"></mui-option>
-  <mui-option value="option-2" label="Gently Used"></mui-option>
-  <mui-option value="option-3" label="Used"></mui-option>
-  <mui-option value="option-4" label="Very Used"></mui-option>
+    <mui-input ng-model="item.name" float-label label="Item Name"></mui-input>
+    <div class="mui-textfield mui-textfield--float-label">
+   <input type="number" step="any" ng-model="item.price">
+   <label>Price</label>
+
+ </div>
+
+    <mui-select ng-model="item.condition" name="inputA" float-label label="Item Condition" use-default>
+  <mui-option value="Like New" label="Like New"></mui-option>
+  <mui-option value="Gently Used" label="Gently Used"></mui-option>
+  <mui-option value="Used" label="Used"></mui-option>
+  <mui-option value="Very Used" label="Very Used"></mui-option>
 </mui-select>
-    <mui-textarea ng-model="inputC" rows="5" float-label label="Item Discription"></mui-textarea>
+    <mui-textarea ng-model="item.description" rows="5" float-label label="Item Discription"></mui-textarea>
+
+
+
     <div class="center">
-      <button class="mui-btn mui-btn--primary">Contiune</button>  </form>
-
+      <button class="mui-btn mui-btn--primary" ng-click="submit(item)">Submit</button>  </form>
     </div>
 
-    <div>
-      <img id="image" src="./image.jpg">
-    </div>
 
 </mui-panel>
+
+
 
 </div>

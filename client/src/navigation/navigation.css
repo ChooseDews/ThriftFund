@@ -46,7 +46,7 @@ secondary-nav {
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
-	width: 100vw;
+	width: 100%;
 	background-color: #1976D2;
 	display: block;
 	color: white;
@@ -55,7 +55,7 @@ secondary-nav {
 nav-overlay {
 	width: 100vw;
 	height: 100vh;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	background-color: #074665;

@@ -6,8 +6,9 @@ var Schema = mongoose.Schema;
 
 var listing = Schema({
   name: String,
-  discription: String,
+  description: String,
   condition: String,
+  price: Number,
   comments: Number,
   timestamp: { type: Date, default: Date.now },
   images: [{

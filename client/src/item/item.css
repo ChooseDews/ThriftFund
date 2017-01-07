@@ -1,0 +1,57 @@
+.item img{
+  width: 100%;
+}
+
+.item .title{
+	text-align: center;
+	color: #505050;
+	padding: 10px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+  background: white;
+}
+
+.item .condition{
+  background-color: #aba9a9;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+}
+
+.item .price{
+  background-color: #505050;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4em;
+}
+
+.item .discription{
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+
+  padding: 20px;
+}
+
+.item .comments{
+  background: #f7f7f7;
+  padding: 20px;
+}
+
+.item comment{
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+
+  margin-bottom: 8px;
+}
+
+.item .commentHeader{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}

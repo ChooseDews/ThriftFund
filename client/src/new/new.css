@@ -10,3 +10,17 @@
 img {
   max-width: 100%; /* This rule is very important, please do not ignore this! */
 }
+
+.picturePlaceholder{
+  width: 100%;
+  margin-top: 0;
+  height: 100vw;
+  background-color: #d0d0d0;
+  text-align: center;
+}
+
+.picturePlaceholder i{
+  line-height: 100vw;
+  font-size: 7em;
+  color: grey;
+}

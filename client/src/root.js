@@ -37,7 +37,16 @@ angular.module('app', [
     url: "/create",
     templateUrl: "new/new",
     parent: navigation
-  })  ;
+  })
+
+  .state('item', {
+    url: "/item/:itemId",
+    templateUrl: "item/item",
+    parent: navigation
+  })
+
+
+   ;
 
 
 

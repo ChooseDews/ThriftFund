@@ -1,18 +1,25 @@
-angular.module('app').controller('newController', function($scope, $timeout) {
+angular.module('app').controller('newController', function($scope, $listing) {
 
-  $('#image').cropper({
-    aspectRatio: 1 / 1,
-    crop: function(e) {
-      // Output the result data for cropping image.
-      console.log(e.x);
-      console.log(e.y);
-      console.log(e.width);
-      console.log(e.height);
-      console.log(e.rotate);
-      console.log(e.scaleX);
-      console.log(e.scaleY);
-    }
+  cropped = $('#image').cropper({
+    aspectRatio: 1 / 1
   });
+
+  console.log(cropped)
+
+  $scope.item = {
+    condition: "Gently Used"
+  };
+
+  $scope.submit = function(item){
+    item.image = $('#image').cropper('getCroppedCanvas', {
+    width: 800,
+    height: 800,
+    fillColor: '#FFFFFF'
+  }).toDataURL('image/jpeg');;
+    $listing.create(item).then(function(data){
+      console.log(data);
+    })
+  };
 
 
 });

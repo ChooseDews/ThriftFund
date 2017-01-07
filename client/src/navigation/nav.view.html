@@ -3,8 +3,8 @@
     <div class="brand">
         <low>thrift</low>Fund
     </div>
-    <i ui-sref="home" ng-show="$state.current.name == 'new'" class="material-icons right">view_list</i>
-    <i ui-sref="new" ng-show="$state.current.name != 'new'" class="material-icons right">add_circle</i>
+    <i ui-sref="home" ng-show="$state.current.name == 'new' || $state.current.name == 'item'" class="material-icons right">view_list</i>
+    <i ui-sref="new" ng-show="$state.current.name != 'new' && $state.current.name != 'item'" class="material-icons right">add_circle</i>
 </primary-nav>
 <primary-nav-fill></primary-nav-fill>
 
@@ -25,7 +25,7 @@
 
 </nav-overlay>
 
-<div ui-view></div>
+<div ui-view class="mainContent"></div>
 
 <footer>
 

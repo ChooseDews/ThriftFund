@@ -1,10 +1,7 @@
 body {
-	max-width: 400px;
-	max-height: 667px;
-	overflow: hidden;
-	overflow-y: scroll;
-	width: 100vw;
-	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 100%;
 	top: 0;
 	left: 0;
 	position: absolute;
@@ -13,6 +10,12 @@ body {
 
 html{
 	background-color: #e8e8e8;
-	overflow: hidden;
+	width: 100%;
+	overflow-x: hidden;
 	overflow-y: scroll;
+}
+
+.mainContent{
+	max-width: 500px;
+	margin: auto;
 }

@@ -1,0 +1,34 @@
+<div class="item" ng-controller="itemController">
+
+  <img ng-src="{{item.images[0].external}}" alt="">
+  <div class="title">
+    {{item.name}}
+  </div>
+
+  <div class="condition">
+    {{item.condition}} Condition
+  </div>
+  <div class="price">
+    {{item.price | currency:"$"}}
+  </div>
+  <div class="discription  mui--z2">
+    {{item.description}}
+  </div>
+
+  <div class="comments">
+
+    <div class="commentHeader">
+      Comments
+    </div>
+
+    <comment><b>John99</b> Really Cool Product</comment>
+    <comment><b>John99</b> Really Cool Product</comment>
+    <comment><b>John99</b> Really Cool Product</comment>
+    <comment><b>John99</b> Really Cool Product</comment>
+
+  </div>
+
+
+
+
+</div>

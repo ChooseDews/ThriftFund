@@ -1,15 +1,15 @@
-<div class='listing mui--z1'>
+<div class='listing mui--z1' ui-sref="item({itemId: listing._id})">
 
 
-<img src="http://lorempixel.com/400/400" alt="">
+<img ng-src="{{listing.images[0].external}}" alt="">
 
 <div class="title">
-	{{name | limitTo:20 }} <condition>Like New</condition>
+	{{listing.name | limitTo:20 }} <condition>{{listing.condition }}</condition>
 	<span class="commentCount">2 <i class="material-icons">comment</i></span>
 </div>
 <p class="content">
 
-{{ discription | limitTo:80 }}...
+{{ listing.description | limitTo:80 }}...
 
 </p>
 
