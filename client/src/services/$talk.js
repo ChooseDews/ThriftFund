@@ -1,8 +1,9 @@
 angular.module('app').factory('$talk', function($http, $state){
-  alert(apiUrl);
-  if(!apiUrl){
     var apiUrl = 'http://localhost:3000/api/';
+  if(localStorage.apiUrl){
+    apiUrl = localStorage.apiUrl;
   }
+  alert(apiUrl);
   var errorHandler = function(response){
      if(response.status === 401 && !$state.is('login') && !$state.is('register')){
        //if(localStorage.token) localStorage.removeItem('token');
