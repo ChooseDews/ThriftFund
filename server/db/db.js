@@ -1,5 +1,7 @@
 var db = {};
 var mongoose = require('mongoose');
+var bcrypt = require('bcrypt-nodejs');
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/thiftfund');
 var Schema = mongoose.Schema;
 
@@ -25,6 +27,17 @@ var user = Schema({
   password: String,
   username: String
 });
+
+user.methods.generateHash = function(password) {
+      return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+  };
+
+  // checking if password is valid
+  user.methods.validPassword = function(password) {
+      if(!password) return false;
+      return bcrypt.compareSync(password, this.password);
+  };
+
 
 var comment = Schema({
   listing: { type: Schema.Types.ObjectId, ref: 'Listings' },

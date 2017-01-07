@@ -1,0 +1,14 @@
+.login .icon-container{
+  text-align: center;
+}
+
+.login .icon-container i{
+color: grey;
+font-size: 6em;
+}
+
+.login .icon-container p{
+color: grey;
+font-family: 'Open Sans', sans-serif;
+margin-bottom: 20px;
+}

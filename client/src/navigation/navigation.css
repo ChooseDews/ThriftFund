@@ -117,3 +117,30 @@ right: 0;
 bottom: 0;
 left: 0;
 }
+
+user-nav{
+	display: block;
+	width: 100vw;
+	height: 70px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	color: white;
+	background-color: #1c313c;
+}
+
+user-nav name{
+	display: block;
+	font-size: 1em;
+
+
+}
+
+user-nav username{
+	display: block;
+	font-size: 1.5em;
+	margin-top: 10px;
+	font-family: 'Oswald', sans-serif;
+
+
+}

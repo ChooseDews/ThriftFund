@@ -20,8 +20,17 @@
 
     <item ui-sref="home">Listings</item>
     <item ui-sref="new">Donate</item>
-    <item>Register</item>
-    <item>Login</item>
+    <item ui-sref="register" ng-hide="$auth.user._id">Register</item>
+    <item ui-sref="login" ng-hide="$auth.user._id">Login</item>
+    <item ng-click="$auth.logout()" ng-show="$auth.user._id">Logout</item>
+
+
+    <user-nav ng-show="$auth.user._id">
+      <username>{{$auth.user.username}}</username>
+      <name>{{$auth.user.name.first}} {{$auth.user.name.last}}</name>
+
+
+    </user-nav>
 
 </nav-overlay>
 

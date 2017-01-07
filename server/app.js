@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var db = require('./db/db.js');
 var index = require('./routes/index');
 var listing = require('./routes/listing');
+var auth = require('./routes/auth');
 
 var app = express();
 
@@ -21,7 +22,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-
+app.use('/api/auth', auth);
 app.use('/api/listing', listing);
 app.use('/users', index);
 app.use(express.static(path.join(__dirname, 'public')));

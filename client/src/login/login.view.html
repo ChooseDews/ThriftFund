@@ -1,0 +1,40 @@
+<div class="login" ng-controller="loginController">
+
+  <secondary-nav>
+
+  Login To Your Account
+
+  </secondary-nav>
+
+  <mui-panel style="margin: 0;">
+
+  <div class="icon-container">
+
+  <i class="material-icons">account_circle</i>
+  <p>If you don't have an account you can register <a ui-sref="register">here<a></p>
+
+
+  </div>
+
+
+  <div class="error" ng-show="error">
+    {{error}}
+  </div>
+
+    <form ng-submit="login(username, password)">
+      <mui-input ng-model="username" float-label label="Username" required></mui-input>
+      <mui-input ng-model="password" float-label label="Password" required></mui-input>
+
+
+
+
+
+      <div class="center">
+        <button class="mui-btn mui-btn--primary" type="submit">Login</button>
+      </div>
+
+</form>
+
+  </mui-panel>
+
+</div>

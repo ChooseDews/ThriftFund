@@ -28,14 +28,21 @@ angular.module('app', [
     parent: navigation
   })
 
-  .state('login', {
-    url: "/login",
-    templateUrl: "login/login"
-  })
-
   .state('new', {
     url: "/create",
     templateUrl: "new/new",
+    parent: navigation
+  })
+
+  .state('register', {
+    url: "/register",
+    templateUrl: "register/register",
+    parent: navigation
+  })
+
+  .state('login', {
+    url: "/login",
+    templateUrl: "login/login",
     parent: navigation
   })
 
@@ -43,17 +50,18 @@ angular.module('app', [
     url: "/item/:itemId",
     templateUrl: "item/item",
     parent: navigation
-  })
-
-
-   ;
+  });
 
 
 
 })
-.controller('rootController', function($scope, $rootScope, $state) {
+.controller('rootController', function($scope, $rootScope, $state, $auth) {
 
   $rootScope.$state = $state;
+  $rootScope.$auth = $auth;
+
+  $auth.attempt();
+
 
 $scope.showNav = false;
 
