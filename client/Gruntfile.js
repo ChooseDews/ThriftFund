@@ -14,6 +14,7 @@ module.exports = function(grunt) {
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/mui/packages/cdn/js/mui.min.js',
         'bower_components/mui/packages/cdn/angular/mui-angular.min.js',
+        'bower_components/cropper/dist/cropper.min.js',
 
 
 
@@ -26,6 +27,8 @@ module.exports = function(grunt) {
         'bower_components/normalize-css/normalize.css',
         'bower_components/mui/packages/cdn/css/mui.css',
         'bower_components/animate.css/animate.min.css',
+        'bower_components/cropper/dist/cropper.min.css',
+
 
         "src/**/*.css"
     ];

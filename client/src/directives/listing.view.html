@@ -1,14 +1,17 @@
 <div class='listing mui--z1'>
 
 
-<img src="example.jpg" alt="">
+<img src="http://lorempixel.com/400/400" alt="">
 
-<div class="content">
-
-
-	WATERMELLON
-
+<div class="title">
+	{{name | limitTo:20 }} <condition>Like New</condition>
+	<span class="commentCount">2 <i class="material-icons">comment</i></span>
 </div>
+<p class="content">
+
+{{ discription | limitTo:80 }}...
+
+</p>
 
 
 

@@ -3,7 +3,8 @@ angular.module('app').directive('listing', function() {
 		restrict: 'E',
 transclude: true,
 		scope: {
-
+      discription: '@',
+      name: '@'
 		 },
     templateUrl: 'directives/listing'
   };

@@ -1,0 +1,33 @@
+<div ng-controller="newController">
+
+
+<secondary-nav>
+
+Donate Something
+
+</secondary-nav>
+
+
+<mui-panel>
+
+  <form>
+    <mui-input ng-model="inputA" float-label label="Item Name"></mui-input>
+    <mui-select ng-model="inputF" name="inputA" float-label label="Item Condition" use-default>
+  <mui-option value="option-1" label="Like New"></mui-option>
+  <mui-option value="option-2" label="Gently Used"></mui-option>
+  <mui-option value="option-3" label="Used"></mui-option>
+  <mui-option value="option-4" label="Very Used"></mui-option>
+</mui-select>
+    <mui-textarea ng-model="inputC" rows="5" float-label label="Item Discription"></mui-textarea>
+    <div class="center">
+      <button class="mui-btn mui-btn--primary">Contiune</button>  </form>
+
+    </div>
+
+    <div>
+      <img id="image" src="./image.jpg">
+    </div>
+
+</mui-panel>
+
+</div>

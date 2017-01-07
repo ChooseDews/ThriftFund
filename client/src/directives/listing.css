@@ -1,15 +1,58 @@
+listing{
+	margin: 0;
+	padding: 0;
+}
+
 .listing img{
 	width: 100%;
-	border-top-left-radius: 40px;
 }
 
 .listing {
 	display: block;
-	border-top-left-radius: 40px;
-	margin: 20px;
+	margin: 0;
+	background: white;
+	margin-bottom: 20px;
 }
 
 .listing .content{
-	padding: 20px;
-	background: white;
+	padding: 10px;
+	padding-top: 0px;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	text-align: left;
+	white-space: pre-wrap !important;
+
+}
+
+.listing condition{
+	color: grey;
+	font-size: 70%;
+	margin-left: 10px;
+	vertical-align: middle;
+	margin: 3px;
+	padding: 3px;
+}
+
+.listing .commentCount{
+	float: right;
+	line-height: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12pt;
+	color: grey;
+	margin-right: 10px;
+}
+
+.listing .commentCount i{
+	float: right;
+	line-height: 20px;
+	font-size: 12pt;
+	color: grey;
+}
+
+.listing .title{
+	text-align: left;
+	color: black;
+	padding: 10px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.4em;
 }

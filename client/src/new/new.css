@@ -1,0 +1,12 @@
+.center{
+  text-align: center;
+}
+
+.cropper {
+  border-radius: 8px;
+  border: 2px dashed #ccc;
+}
+
+img {
+  max-width: 100%; /* This rule is very important, please do not ignore this! */
+}

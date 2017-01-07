@@ -33,16 +33,18 @@ angular.module('app', [
     templateUrl: "login/login"
   })
 
-  .state('garages', {
-    url: "/garages",
-    templateUrl: "garages/home",
+  .state('new', {
+    url: "/create",
+    templateUrl: "new/new",
     parent: navigation
   })  ;
 
 
 
 })
-.controller('rootController', function($scope) {
+.controller('rootController', function($scope, $rootScope, $state) {
+
+  $rootScope.$state = $state;
 
 $scope.showNav = false;
 
