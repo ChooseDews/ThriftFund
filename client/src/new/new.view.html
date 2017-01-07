@@ -33,9 +33,18 @@ Donate An Item
 <div ng-controller="newController" ng-if="$auth.user._id">
 
 
-<div class="picturePlaceholder">
-<img id=image src="image.jpg" alt="">
+
+  <div class="picturePlaceholder" ng-click="initUpload()" ng-hide="file">
+<i class="material-icons">add_a_photo</i>
+<input type="file" id="fileInput" fileread="file" class="offscreen">
+
+
+  </div>
+
+<div class="picturePlaceholder" ng-show="file">
+<img id=image ng-src="{{file}}" alt="">
 </div>
+
 
 
 
