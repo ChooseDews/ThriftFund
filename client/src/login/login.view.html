@@ -22,8 +22,19 @@
   </div>
 
     <form ng-submit="login(username, password)">
-      <mui-input ng-model="username" float-label label="Username" required></mui-input>
-      <mui-input ng-model="password" float-label label="Password" required></mui-input>
+
+
+      <div class="mui-textfield mui-textfield--float-label">
+  <input type="text" ng-model="username" autocapitalize="off" float-label label="Username" required>
+  <label>Username</label>
+
+</div>
+
+<div class="mui-textfield mui-textfield--float-label">
+  <input type="text" ng-model="password" autocapitalize="off" float-label label="Password" required>
+  <label>Password</label>
+
+</div>
 
 
 

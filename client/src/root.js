@@ -4,7 +4,7 @@ angular.module('app', [
   'mui',
  // 'ngTouch',
   'ng-fastclick',
- // 'angularValidator',
+  'infinite-scroll',
  // 'uiGmapgoogle-maps',
  // 'firebase',
   //'ngAnimate'

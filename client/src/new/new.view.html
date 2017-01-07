@@ -1,81 +1,77 @@
+<div ng-controller="newController" class="createItem">
 
-<secondary-nav>
+    <secondary-nav>
 
-Donate An Item
+        Donate An Item
 
-</secondary-nav>
+    </secondary-nav>
 
-<div ng-controller="newController" ng-if="!$auth.user._id">
+    <div ng-if="!$auth.user._id">
 
+        <mui-panel style="margin: 0;">
 
+            <div class="new-unauthed">
 
-  <mui-panel style="margin: 0;">
+                <i class="material-icons">add_shopping_cart</i>
+                <p>
+                    You must login or register a new account to donate an item.
+                </p>
 
-<div class="new-unauthed">
+                <button class="mui-btn mui-btn--raised mui-btn--primary" ui-sref="login">Login</button>
+                <button class="mui-btn mui-btn--raised" ui-sref="register">register</button>
 
+            </div>
+        </mui-panel>
 
-<i class="material-icons">add_shopping_cart</i>
-    <p>    You must login or register a new account to donate an item.
-</p>
-
-<button class="mui-btn mui-btn--raised mui-btn--primary" ui-sref="login">Login</button>
- <button class="mui-btn mui-btn--raised" ui-sref="register">register</button>
-
-</div>
-</mui-panel>
-
-
-</div>
-
-
-
-
-<div ng-controller="newController" ng-if="$auth.user._id">
-
-
-
-  <div class="picturePlaceholder" ng-click="initUpload()" ng-hide="file">
-<i class="material-icons">add_a_photo</i>
-<input type="file" id="fileInput" fileread="file" init="LoadCrop" class="offscreen">
-
-
-  </div>
-
-<div class="picturePlaceholder" ng-show="file">
-<img id=image ng-src="{{file}}" alt="">
-</div>
-
-
-
-
-<mui-panel style="margin: 0;">
-
-  <form>
-    <mui-input ng-model="item.name" float-label label="Item Name"></mui-input>
-    <div class="mui-textfield mui-textfield--float-label">
-   <input type="number" step="any" ng-model="item.price">
-   <label>Price</label>
-
- </div>
-
-    <mui-select ng-model="item.condition" name="inputA" float-label label="Item Condition" use-default>
-  <mui-option value="Like New" label="Like New"></mui-option>
-  <mui-option value="Gently Used" label="Gently Used"></mui-option>
-  <mui-option value="Used" label="Used"></mui-option>
-  <mui-option value="Very Used" label="Very Used"></mui-option>
-</mui-select>
-    <mui-textarea ng-model="item.description" rows="5" float-label label="Item Discription"></mui-textarea>
-
-
-
-    <div class="center">
-      <button class="mui-btn mui-btn--primary" ng-click="submit(item)">Submit</button>
     </div>
 
-</form>
+    <div ng-show="loading" class="loading">
+        <b>Creating Donation</b>
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
 
-</mui-panel>
+    <div ng-if="$auth.user._id" ng-hide="loading">
 
+        <div class="picturePlaceholder needsclick" ng-click="initUpload()" ng-hide="file">
+            <i class="material-icons needsclick">add_a_photo</i>
+            <input type="file" id="fileInput" fileread="file" init="LoadCrop" class="offscreen needsclick">
 
+        </div>
+
+        <div class="picturePlaceholder" ng-show="file">
+            <img id=image ng-src="{{file}}" alt="">
+        </div>
+
+        <mui-panel style="margin: 0;">
+
+            <form>
+                <mui-input ng-model="item.name" float-label label="Item Name"></mui-input>
+                <div class="mui-textfield mui-textfield--float-label">
+                    <input type="number" step="any" pattern="[0-9]*" ng-model="item.price">
+                    <label>Price</label>
+
+                </div>
+
+                <mui-select ng-model="item.condition" name="inputA" float-label label="Item Condition" use-default>
+                    <mui-option value="Like New" label="Like New"></mui-option>
+                    <mui-option value="Gently Used" label="Gently Used"></mui-option>
+                    <mui-option value="Used" label="Used"></mui-option>
+                    <mui-option value="Very Used" label="Very Used"></mui-option>
+                </mui-select>
+                <mui-textarea ng-model="item.description" rows="5" float-label label="Item Discription"></mui-textarea>
+
+                <div class="center">
+                    <button class="mui-btn mui-btn--primary" ng-click="submit(item)">Submit</button>
+                </div>
+
+            </form>
+
+        </mui-panel>
+
+    </div>
 
 </div>

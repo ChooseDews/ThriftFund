@@ -6,7 +6,7 @@ var Auth = require('./../services/authentication.js');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  Listing.getListings().then(function(listings){
+  Listing.getListings(req.query.p).then(function(listings){
     res.send(listings);
   });
 });

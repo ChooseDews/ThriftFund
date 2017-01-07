@@ -32,7 +32,8 @@ exports.createComment = function(listingId, comment, user){
 
 
 exports.getListings = function(page){
-  return db.Listings.find().sort({timestamp: -1}).limit(10);
+  if(!page) page = 1;
+  return db.Listings.find().sort({timestamp: -1}).skip((page-1)*5).limit(5);
 }
 
 exports.getListing = function(id){

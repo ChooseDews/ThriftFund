@@ -1,5 +1,15 @@
 <div class="item" ng-controller="itemController">
 
+  <div ng-show="loading" class="loading">
+      <b>Loading Item</b>
+      <div class="sk-three-bounce">
+          <div class="sk-child sk-bounce1"></div>
+          <div class="sk-child sk-bounce2"></div>
+          <div class="sk-child sk-bounce3"></div>
+      </div>
+  </div>
+
+
   <img ng-src="{{item.images[0].external}}" alt="">
   <div class="title">
     {{item.name}}

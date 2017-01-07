@@ -16,6 +16,7 @@ module.exports = function(grunt) {
         'bower_components/mui/packages/cdn/angular/mui-angular.min.js',
         'bower_components/cropper/dist/cropper.min.js',
         'bower_components/ng-fastclick/dist/index.min.js',
+        'bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js',
 
 
 
@@ -29,6 +30,7 @@ module.exports = function(grunt) {
         'bower_components/mui/packages/cdn/css/mui.css',
         'bower_components/animate.css/animate.min.css',
         'bower_components/cropper/dist/cropper.min.css',
+        'bower_components/SpinKit/css/spinkit.css',
 
 
         "src/**/*.css"

@@ -42,6 +42,15 @@ img {
 
 }
 
+.loading{
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  padding: 20px;
+  margin-top: 20vh;
+}
+
+
 .new-unauthed i{
 
   font-size: 10em;

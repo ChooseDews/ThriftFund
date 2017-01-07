@@ -1,7 +1,11 @@
 angular.module('app').factory('$listing', function($http, $talk){
   return {
     list: function(page){
-      return $talk.get('listing');
+      if(page){
+        return $talk.get('listing?p='+page);
+      }else{
+        return $talk.get('listing');
+      }
     },
     get: function(id){
       return $talk.get('listing/'+id);

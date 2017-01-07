@@ -1,6 +1,11 @@
 <div ng-controller="feedController">
 
 
+	<div infinite-scroll="moreProducts()" infinite-scroll-distance="3">
+
+
+
+
 <secondary-nav>
 
 Recent Listings
@@ -11,6 +16,6 @@ Recent Listings
 
 <listing ng-repeat="listing in listings" listing="listing"></listing>
 
-
+	</div>
 
 </div>

@@ -15,6 +15,9 @@ angular.module('app').controller('newController', function($scope, $listing, $ti
 
 
 
+  $scope.loading = false;
+
+
 
   $scope.initUpload = function(){
     $timeout(function(){
@@ -23,11 +26,13 @@ angular.module('app').controller('newController', function($scope, $listing, $ti
   };
 
   $scope.submit = function(item){
+    $scope.loading = true;
+
     item.image = $('#image').cropper('getCroppedCanvas', {
     width: 800,
     height: 800,
     fillColor: '#FFFFFF'
-  }).toDataURL('image/jpeg');;
+  }).toDataURL('image/jpeg');
     $listing.create(item).then(function(data){
       console.log(data);
       $state.go('item', {itemId: data._id})
