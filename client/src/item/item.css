@@ -44,7 +44,6 @@
 .item comment{
   display: block;
   font-family: 'Open Sans', sans-serif;
-
   margin-bottom: 8px;
 }
 
@@ -54,4 +53,8 @@
   font-family: 'Oswald', sans-serif;
   margin-bottom: 20px;
   font-size: 1.1em;
+}
+
+.item .commentBox{
+  min-height: 0px !important;
 }

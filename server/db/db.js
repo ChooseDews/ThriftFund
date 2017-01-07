@@ -9,7 +9,7 @@ var listing = Schema({
   description: String,
   condition: String,
   price: Number,
-  comments: Number,
+  comments: [{ type: Schema.Types.ObjectId, ref: 'Comments' }],
   timestamp: { type: Date, default: Date.now },
   images: [{
     iternal: String,
@@ -29,7 +29,9 @@ var user = Schema({
 var comment = Schema({
   listing: { type: Schema.Types.ObjectId, ref: 'Listings' },
   comment: String,
-  user: { type: Schema.Types.ObjectId, ref: 'Users' }
+  timestamp: { type: Date, default: Date.now },
+  //user: { type: Schema.Types.ObjectId, ref: 'Users' }
+  username: String
 });
 
 

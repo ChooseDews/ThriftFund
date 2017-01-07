@@ -10,6 +10,15 @@ angular.module('app').controller('itemController', function($scope, $listing, $s
     console.log(item);
   });
 
+  $scope.createComment = function(comment){
+    $scope.comment = '';
+    $listing.comment(itemId, comment).then(function(comment){
+
+      $scope.item.comments.push(comment);
+
+    });
+  };
+
 
 
 });

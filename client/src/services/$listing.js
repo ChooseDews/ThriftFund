@@ -8,6 +8,12 @@ angular.module('app').factory('$listing', function($http, $talk){
     },
     create: function(object){
       return $talk.post('listing', object);
+    },
+    comment: function(id, comment){
+      return $talk.post('listing/comment', {
+        itemId: id,
+        comment: comment
+      })
     }
   };
 });

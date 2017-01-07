@@ -9,11 +9,21 @@ router.get('/', function(req, res, next) {
   });
 });
 
+
+router.post('/comment', function(req, res, next) {
+  var itemId = req.body.itemId;
+  var comment = req.body.comment;
+  Listing.createComment(itemId, comment).then(function(comment){
+    res.send(comment);
+  });
+});
+
 router.get('/:itemId', function(req, res, next) {
   Listing.getListing(req.params.itemId).then(function(listing){
     res.send(listing);
   });
 });
+
 
 router.post('/', function(req,res,next){
   var listing = req.body;
@@ -22,8 +32,11 @@ router.post('/', function(req,res,next){
   var file = Images.process64(listing.image, l._id);
   l.images.push(file);
   console.log(file);
-  l.save();
-  res.send(l);
+  l.save().then(function(document){
+      res.send(document);
+  }).catch(function(e){
+    console.log(e)
+  });
 });
 
 module.exports = router;

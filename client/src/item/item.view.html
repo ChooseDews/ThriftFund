@@ -21,10 +21,16 @@
       Comments
     </div>
 
-    <comment><b>John99</b> Really Cool Product</comment>
-    <comment><b>John99</b> Really Cool Product</comment>
-    <comment><b>John99</b> Really Cool Product</comment>
-    <comment><b>John99</b> Really Cool Product</comment>
+    <comment ng-repeat="comment in item.comments"><b>{{comment.username}}</b> {{comment.comment}}</comment>
+
+
+<form ng-submit="createComment(comment)">
+
+
+    <div class="mui-textfield">
+    <input ng-model="comment" rows="0" placeholder="New Comment">
+  </div>
+</form>
 
   </div>
 
