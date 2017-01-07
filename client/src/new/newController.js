@@ -4,17 +4,22 @@ angular.module('app').controller('newController', function($scope, $listing, $ti
     condition: "Gently Used"
   };
 
+  $scope.LoadCrop = function(){
+    $timeout(function(){
+      $('#image').cropper({
+          aspectRatio: 1 / 1
+        });
+    }, 10)
+
+  };
+
+
+
+
   $scope.initUpload = function(){
     $timeout(function(){
       $("#fileInput").click();
-      $timeout(function(){
-        $('#image').cropper({
-            aspectRatio: 1 / 1
-          });
-      }, 3000)
-
-
-    })
+    });
   };
 
   $scope.submit = function(item){
@@ -33,13 +38,15 @@ angular.module('app').controller('newController', function($scope, $listing, $ti
 }).directive("fileread", [function () {
     return {
         scope: {
-            fileread: "="
+            fileread: "=",
+            init: "="
         },
         link: function (scope, element, attributes) {
             element.bind("change", function (changeEvent) {
                 var reader = new FileReader();
                 reader.onload = function (loadEvent) {
                     scope.$apply(function () {
+                        scope.init()
                         scope.fileread = loadEvent.target.result;
                     });
                 }
