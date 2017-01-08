@@ -51,12 +51,17 @@ module.exports = function(grunt) {
                 src: 'src/index-ios.html',
                 dest: 'dist/index-ios.html'
             },
+            fonts: {
+                expand: true,
+                cwd: 'src/fonts',
+                src: '**',
+                dest: 'dist/fonts'
+            },
             cordova: {
               expand: true,
               src: '**',
               dest: 'cordova/www',
               cwd: 'dist/'
-
             }
         },
         clean: ['dist/*', 'cordova/www/*'],

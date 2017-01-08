@@ -17,7 +17,7 @@ img {
 }
 
 .picturePlaceholder{
-  width: 100%;
+  width: 100vw;
   margin-top: 0;
   height: 100vw;
   max-width: 500px;
@@ -30,6 +30,12 @@ img {
   line-height: 100vw;
   font-size: 7em;
   color: grey;
+}
+
+@media all and (min-width: 500px) {
+.picturePlaceholder i {
+  line-height: 500px;
+}
 }
 
 .new-unauthed{
