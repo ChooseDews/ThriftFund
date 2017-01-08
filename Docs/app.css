@@ -37,15 +37,18 @@ body {
 	margin: auto;
 }
 
-panel {
+.panel {
 	background-color: white;
-	padding: 20px;
 	display: block;
 	font-family: 'Open Sans',sans-serif;
 	width: 100%;
 	color: grey;
 	margin-top: 50px;
 	min-height: 50px;
+}
+
+.panel .content{
+	padding: 20px;
 }
 
 warn {

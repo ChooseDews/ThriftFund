@@ -5,7 +5,7 @@
         <title>Thift Fund Documention</title>
         <link href="https://unpkg.com/basscss@7.1.1/css/basscss.min.css" rel="stylesheet">
         <link href="app.css" rel="stylesheet" type="text/css"/>
-				<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
 
@@ -21,30 +21,41 @@
 
         <div class="container">
 
-            <panel>
+            <div class="panel">
+
+							<div class="content">
+
 
                 <topic>Introduction</topic>
 
-                <p>										<br>
-
+                <p>
+                    <br>
 
                     Thrift Fund is an app that allows other people to donate items to be sold for your cause. In my implementation it works very close to the likes of Craigslist. The technology used behind the app is cordova for the front end and node.js for the backend
                     (or API).
 
                     <br><br>
 
+										<a href="https://github.com/ChooseDews/ThriftFund">
                     <button class="btn btn-outline mb1 blue">View Code On Github</button>
+									</a>
 
                 </p>
 
-            </panel>
+							</div>
 
-            <panel>
+
+            </div>
+
+            <div class="panel">
+
+							<div class="content">
+
 
                 <topic>Running The App</topic>
 
-                <p>										<br>
-
+                <p>
+                    <br>
 
                     I built Thrift Fund to work on both Andriod and IOS. I have taken the liberity to publish the app to the App Store which means
                     <b>install is super simple for IOS devices and doesn't require running anything locally.</b>
@@ -61,10 +72,13 @@
                     <file>server</file>
 
                 </p>
+							</div>
 
-            </panel>
+            </div>
 
-            <panel>
+            <div class="panel">
+							<div class="content">
+
 
                 <topic>Compiling The App</topic>
                 <warn>ADVANCED</warn>
@@ -94,27 +108,36 @@
                     This should start up ios emulator and will only work on Mac OSX with XCode installed.
 
                 </p>
+							</div>
 
-            </panel>
+            </div>
 
+            <div class="panel">
 
-						<panel>
-
-								<topic>Server</topic>
-								<p>
-										<br>
-Thrift Fund relies on a server to handle storing items, images, and users. In <file>server/</file> you can see the code running the API found on https://thrift.fund/.
-The server uses Mongodb as its database and JWT for user authentication. Sidenote if you are running locally and don't want to use the demo database you must modify the database connection string in <file>server/config.js</file>
-<br><br>
-The API has three main functions founds in <file>server/services</file> which are managing items, users, and users wishlists. The client is able to use the API routes from <file>server/routes</file> to update and retrieve data.
-
-										<br><br>
+							<div class="content">
 
 
+                <topic>Server</topic>
+                <p>
+                    <br>
+                    Thrift Fund relies on a server to handle storing items, images, and users. In
+                    <file>server/</file>
+                    you can see the code running the API found on https://thrift.fund/. The server uses Mongodb as its database and JWT for user authentication. Sidenote if you are running locally and don't want to use the demo database you must modify the database
+                    connection string in
+                    <file>server/config.js</file>
+                    <br><br>
+                    The API has three main functions founds in
+                    <file>server/services</file>
+                    which are managing items, users, and users wishlists. The client is able to use the API routes from
+                    <file>server/routes</file>
+                    to update and retrieve data.
 
-								</p>
+                    <br><br>
 
-						</panel>
+                </p>
+							</div>
+
+            </div>
 
         </div>
 
