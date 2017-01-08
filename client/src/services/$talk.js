@@ -1,5 +1,5 @@
 angular.module('app').factory('$talk', function($http, $state){
-    var apiUrl = 'http://localhost:3000/api/';
+  var apiUrl = '/api/';
   if(localStorage.apiUrl){
     apiUrl = localStorage.apiUrl;
   }

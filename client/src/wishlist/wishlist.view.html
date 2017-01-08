@@ -16,9 +16,18 @@ Wishlist
 	<name>{{$auth.user.name.first}} {{$auth.user.name.last}}</name>
 </user-nav>
 
+<div ng-show="loading" class="loading">
+		<b>Loading Wishlist</b>
+		<div class="sk-three-bounce">
+				<div class="sk-child sk-bounce1"></div>
+				<div class="sk-child sk-bounce2"></div>
+				<div class="sk-child sk-bounce3"></div>
+		</div>
+</div>
 
 
-<div ng-repeat="listing in listings">
+
+<div ng-repeat="listing in listings" ng-hide="loading">
 
 
 	<div class='wishlist mui--z1' ui-sref="item({itemId: listing._id})">

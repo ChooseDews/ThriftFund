@@ -56,13 +56,6 @@ db.Comments  = mongoose.model('Comments', comment);
 
 
 
-db.Listings.find({}).then(function(docs){
-  for(var doc of docs){
-    doc.image[0].external = doc.image[0].external.replace('http://thift.fund', 'https://thrift.fund');
-    doc.save();
-  }
-});
-
 
 
 module.exports = db;
