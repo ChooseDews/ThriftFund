@@ -145,6 +145,7 @@ user-nav{
 	height: 70px;
 	position: fixed;
 	bottom: 0;
+	text-align: center;
 	left: 0;
 	color: white;
 	background-color: #1c313c;

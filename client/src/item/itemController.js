@@ -1,13 +1,18 @@
 
 
 
-angular.module('app').controller('itemController', function($scope, $listing, $state, $auth, $wishlist) {
+angular.module('app').controller('itemController', function($scope, $listing, $state, $auth, $wishlist, $timeout) {
 
+$scope.loading = true;
 
   var itemId = $state.params.itemId;
   $listing.get(itemId).then(function(item){
     $scope.item = item;
     console.log(item);
+    $timeout(function(){
+      $scope.loading = false;
+    }, 500);
+
   });
 
   $scope.createComment = function(comment){
@@ -21,6 +26,12 @@ angular.module('app').controller('itemController', function($scope, $listing, $s
 
   $scope.add = function(){
     $wishlist.add(itemId).then(function(user){
+      console.log(user);
+    });
+  }
+
+  $scope.remove = function(){
+    $wishlist.remove(itemId).then(function(user){
       console.log(user);
     });
   }

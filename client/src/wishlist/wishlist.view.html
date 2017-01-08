@@ -11,6 +11,11 @@
 Wishlist
 </secondary-nav>
 
+<user-nav ng-show="$auth.user._id">
+	<username>{{$auth.user.username}}</username>
+	<name>{{$auth.user.name.first}} {{$auth.user.name.last}}</name>
+</user-nav>
+
 
 
 <div ng-repeat="listing in listings">
@@ -21,7 +26,6 @@ Wishlist
 
 	<div class="title">
 		{{listing.name | limitTo:20 }} <condition>{{listing.condition }}</condition>
-		<span class="commentCount">{{listing.comments.length}} <i class="material-icons">comment</i></span>
 	</div>
 	<p class="content">
 
@@ -34,6 +38,8 @@ Wishlist
 	</div>
 
 </div>
+
+<br><br><br><br>
 
 
 

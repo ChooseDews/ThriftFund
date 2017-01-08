@@ -11,6 +11,22 @@
   background: white;
 }
 
+.item .title i{
+  font-size: 1.2em;
+  vertical-align: sub;
+}
+
+.item .title i.true{
+  color: #f3d16b;
+}
+
+.item .title i.false{
+  font-size: 1.2em;
+  vertical-align: sub;
+  color: grey;
+
+}
+
 .item .condition{
   background-color: #aba9a9;
   text-align: center;
