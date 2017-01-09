@@ -1,7 +1,10 @@
 
 
 
-angular.module('app').controller('registerController', function($scope, $auth, $state) {
+angular.module('app').controller('registerController', function($scope, $auth, $state, $device) {
+
+  $device.keyboard.showBar();
+
 
 $scope.error = '';
 

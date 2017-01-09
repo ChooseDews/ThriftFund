@@ -1,5 +1,6 @@
-angular.module('app').controller('loginController', function($scope, $auth, $state, $stateParams) {
+angular.module('app').controller('loginController', function($scope, $auth, $state, $stateParams, $device) {
 
+  $device.keyboard.showBar();
 
 $scope.login = function(username, password){
 

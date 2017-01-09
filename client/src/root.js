@@ -67,7 +67,7 @@ angular.module('app', [
 
 
 })
-.controller('rootController', function($scope, $rootScope, $state, $auth, $wishlist) {
+.controller('rootController', function($scope, $rootScope, $state, $auth, $wishlist, $device) {
 
   $rootScope.$state = $state;
   $rootScope.$auth = $auth;

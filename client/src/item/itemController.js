@@ -1,9 +1,12 @@
 
 
 
-angular.module('app').controller('itemController', function($scope, $listing, $state, $auth, $wishlist, $timeout) {
+angular.module('app').controller('itemController', function($scope, $listing, $state, $auth, $wishlist, $timeout, $device) {
 
 $scope.loading = true;
+
+$device.keyboard.hideBar();
+
 
   var itemId = $state.params.itemId;
   $listing.get(itemId).then(function(item){
@@ -17,6 +20,7 @@ $scope.loading = true;
 
   $scope.createComment = function(comment){
     $scope.comment = '';
+    $device.keyboard.hide();
     $listing.comment(itemId, comment).then(function(comment){
 
       $scope.item.comments.push(comment);

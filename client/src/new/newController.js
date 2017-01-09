@@ -1,4 +1,6 @@
-angular.module('app').controller('newController', function($scope, $listing, $timeout, $state) {
+angular.module('app').controller('newController', function($scope, $listing, $timeout, $state, $device) {
+
+  $device.keyboard.showBar();
 
   $scope.item = {
     condition: "Gently Used"
