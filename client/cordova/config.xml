@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="thiftfund.main" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Thift Fund</name>
+<widget id="fund.thrift.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Thrift Fund</name>
     <description>
       Thift Fund FBLA Competition App
     </description>
@@ -26,8 +26,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="Orientation" value="portrait" />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="*">
-  <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />
-  <variable name="MICROPHONE_USAGE_DESCRIPTION" value="App would like to access the microphone." />
+  <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera so you can photograph items" />
   <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />
 </plugin>
 </widget>
