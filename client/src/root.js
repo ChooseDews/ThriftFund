@@ -5,7 +5,7 @@ angular.module('app', [
  // 'ngTouch',
   'ng-fastclick',
   'infinite-scroll',
- // 'uiGmapgoogle-maps',
+ 'mgcrea.pullToRefresh',
  // 'firebase',
   //'ngAnimate'
 ]).config(function($stateProvider, $urlRouterProvider) {

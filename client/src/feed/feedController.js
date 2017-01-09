@@ -29,5 +29,9 @@ $timeout(function(){
 
 },1000);
 
+ $scope.onReload = function() {
+   alert('reloading');
+ };
+
 
 });
