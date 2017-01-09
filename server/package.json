@@ -17,6 +17,7 @@
     "jsonwebtoken": "^7.2.1",
     "mongoose": "^4.7.6",
     "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "swearjar": "^0.1.3"
   }
 }

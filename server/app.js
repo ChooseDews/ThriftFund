@@ -9,6 +9,7 @@ var index = require('./routes/index');
 var listing = require('./routes/listing');
 var auth = require('./routes/auth');
 var wishlist = require('./routes/wishlist');
+var swearjar = require('swearjar');
 
 var app = express();
 
@@ -22,6 +23,22 @@ app.use(logger('dev'));
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+
+app.use(function(req,res,next){
+
+  console.log(req.body);
+  if(req.body){
+    console.log(req.body);
+    for(var key in req.body){
+      if(typeof req.body[key] === 'string' && key != 'password'){
+        var profane = swearjar.profane(req.body[key]);
+        if(profane) return res.status(406).send('Bad word');
+      }
+    }
+  }
+  next();
+});
 
 app.use('/api/wishlist', wishlist);
 app.use('/api/auth', auth);

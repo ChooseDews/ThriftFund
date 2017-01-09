@@ -8,6 +8,10 @@ angular.module('app').factory('$talk', function($http, $state){
        //if(localStorage.token) localStorage.removeItem('token');
        return $state.go('login');
      }
+
+     if(response.status == 406){
+       return $state.go('profane');
+     }
      return response;
   };
 

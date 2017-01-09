@@ -1,4 +1,4 @@
-angular.module('app').factory('$auth', function($http, $talk, $state){
+angular.module('app').factory('$auth', function($http, $talk, $state, $rootScope){
   return {
     storeToken: function(token){
       localStorage.token = token;
@@ -41,7 +41,7 @@ angular.module('app').factory('$auth', function($http, $talk, $state){
         }
       });
     },
-    login: function(username, password){
+    login: function(username, password, state){
       var self = this;
 
       return $talk.post('auth/login', {username: username, password: password}).then(function(user){
@@ -49,7 +49,13 @@ angular.module('app').factory('$auth', function($http, $talk, $state){
           self.user = user;
           self.storeToken(user.token);
           console.log(user);
-          $state.go('home')
+          if(state) {
+            $rootScope.back();
+
+          }else{
+            $state.go('home')
+
+          }
         }else{
           throw user;
         }

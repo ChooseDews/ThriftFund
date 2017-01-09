@@ -41,7 +41,7 @@ angular.module('app', [
   })
 
   .state('login', {
-    url: "/login",
+    url: "/login?last",
     templateUrl: "login/login",
     parent: navigation
   })
@@ -49,6 +49,12 @@ angular.module('app', [
   .state('wishlist', {
     url: "/wishlist",
     templateUrl: "wishlist/wishlist",
+    parent: navigation
+  })
+
+  .state('profane', {
+    url: "/profane",
+    templateUrl: "profane/profane",
     parent: navigation
   })
 
@@ -76,5 +82,17 @@ $scope.showNav = false;
 $scope.toggleNav = function(){
 	$scope.showNav = !$scope.showNav;
 };
+
+$rootScope.$on('$stateChangeSuccess', function(ev, to, toParams, from, fromParams) {
+    $rootScope.previousState = from.name;
+    $rootScope.currentState = to.name;
+    $rootScope.previousStateParams = fromParams;
+    $rootScope.currentStateParams = toParams;
+});
+
+$rootScope.back = function(){
+  $state.go($rootScope.previousState, $rootScope.previousStateParams);
+}
+
 
 });

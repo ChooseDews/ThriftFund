@@ -1,5 +1,8 @@
 var db = require('./../db/db.js');
 var exports = {};
+var swearjar = require('swearjar');
+
+
 
 
 
@@ -16,7 +19,7 @@ exports.createListing = function(name, description, condition, price, user, imag
 exports.createComment = function(listingId, comment, user){
   var comment = new db.Comments({
     listing: listingId,
-    comment: comment,
+    comment: swearjar.censor(comment),
     username: user.username,
     user: user._id
   });
