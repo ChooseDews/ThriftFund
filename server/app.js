@@ -24,12 +24,9 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-
+// Profanity Filter Middleware
 app.use(function(req,res,next){
-
-  console.log(req.body);
   if(req.body){
-    console.log(req.body);
     for(var key in req.body){
       if(typeof req.body[key] === 'string' && key != 'password'){
         var profane = swearjar.profane(req.body[key]);

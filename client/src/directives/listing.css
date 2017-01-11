@@ -5,6 +5,11 @@ listing{
 
 .listing img{
 	width: 100%;
+	min-width: 100%;
+	min-height: 100vw;
+	max-width: 500px;
+	max-height: 500px;
+	background: #e4e4e4;
 }
 
 .listing {
@@ -12,6 +17,21 @@ listing{
 	margin: 0;
 	background: white;
 	margin-bottom: 20px;
+   position: relative;
+   width: 100%; /* for IE 6 */
+}
+
+
+.listing price{
+	display: block;
+  position:absolute;
+	z-index: 10;
+	background: grey;
+	color: white;
+	padding: 10px;
+	right: 0;
+	top: 0;
+	opacity: 0.9;
 }
 
 .listing .content{

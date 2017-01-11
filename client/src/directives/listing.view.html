@@ -1,5 +1,6 @@
 <div class='listing mui--z1' ui-sref="item({itemId: listing._id})">
 
+<price ng-if="listing.price">{{listing.price | currency:"$"}}</price>
 
 <img ng-src="{{listing.images[0].external}}" alt="">
 
