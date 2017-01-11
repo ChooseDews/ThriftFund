@@ -5,8 +5,7 @@ listing{
 
 .listing img{
 	width: 100%;
-	min-width: 100%;
-	min-height: 100vw;
+	height: 100vw;
 	max-width: 500px;
 	max-height: 500px;
 	background: #e4e4e4;
