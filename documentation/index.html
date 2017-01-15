@@ -124,6 +124,10 @@
                     <button class="btn btn-outline mb1 blue">View Code On Github</button>
 									</a>
 
+                  <a href="https://github.com/ChooseDews/ThriftFund">
+                  <button class="btn btn-outline mb1 blue">Download Lastest Release</button>
+                </a>
+
                 </p>
 
 							</div>
@@ -136,27 +140,51 @@
 							<div class="content">
 
 
-                <topic>Running The App</topic>
+                <topic>Running The App In XCode (IOS)</topic>
 
                 <p>
                     <br>
 
-                    I built Thrift Fund to work on both Andriod and IOS. I have taken the liberity to publish the app to the App Store which means
-                    <b>install is super simple for IOS devices and doesn't require running anything locally.</b>
+
+                    Running the app locally in XCode is super simple! Under <file>./buildIOS</file> run <file>Thift Fund.xcode</file> then after Xcode opens click emulate selecting a target device (I recommend using a standard size iphone 7)
 
                     <br><br>
 
-                    <button class="btn btn-outline mb1 blue">App Store Link</button>
+                    <b>Since the app requires an API the computer must be able to connect to the internet, and able to navigate to <a href="https://thrift.fund/">thrift.fund</a></b>
 
-                    <br><br>
-
-                    You can also open the precompiled app in
-                    <file>client/cordova/platform/ios</file>
-                    with XCode to run there. Bare in mind that the app is programmed to interact with https://thrift.fund/ which is a hosted API from the code found in
-                    <file>server</file>
 
                 </p>
 							</div>
+
+            </div>
+
+
+            <div class="panel">
+
+              <div class="content">
+
+
+                <topic>Running The App On Device (IOS)</topic>
+
+                <p>
+                    <br>
+
+                    I have uploaded the App to Apple's <a href="https://developer.apple.com/testflight/">Test Flight Program</a> which is used to allow beta testers to use an App. This is normally an invite only process since you need the testers email.
+
+                    <br><br>
+
+                    I have streamlined this process by creating a site which will take your email and add it to the allowed testers list. After you hit submit you should get an email from apple allowing you to download the app onto an IOS device. <br>
+                  <br>  <b>I'm in no way collecting the email used, nor does the email have to be the same as your Apple Account email.
+                    </b>
+
+                    <br><Br>
+
+                    <a href="https://thriftfund.herokuapp.com/">
+                    <button class="btn btn-outline mb1 blue">Request Test Access</button>
+</a>
+
+                </p>
+              </div>
 
             </div>
 
@@ -169,7 +197,7 @@
 
                 <p>
                     <br>
-                    Running the app locally through an emulator is a more advanced process but can be easily achieved. The app is separating into two main components client and server.
+                    Compiling the app anew is a more advanced process but can be easily achieved. The app is separating into two main components client and server.
                     <br><br>
 
                     <b>Prerequisites:
@@ -206,7 +234,7 @@
                     <br>
                     Thrift Fund relies on a server to handle storing items, images, and users. In
                     <file>server/</file>
-                    you can see the code running the API found on https://thrift.fund/. The server uses Mongodb as its database and JWT for user authentication. Sidenote if you are running locally and don't want to use the demo database you must modify the database
+                    you can see the code running the API found on <a href="https://thrift.fund/">thrift.fund</a>. The server uses Mongodb as its database and JWT for user authentication. Sidenote if you are running locally and don't want to use the demo database you must modify the database
                     connection string in
                     <file>server/config.js</file>
                     <br><br>

@@ -45,6 +45,12 @@ angular.module('app', [
     parent: navigation
   })
 
+  .state('about', {
+    url: "/about",
+    templateUrl: "about/about",
+    parent: navigation
+  })
+
   .state('wishlist', {
     url: "/wishlist",
     templateUrl: "wishlist/wishlist",
