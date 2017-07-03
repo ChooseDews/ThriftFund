@@ -1,0 +1,25 @@
+{
+    "name": "fund.thrift.app",
+    "version": "1.0.0",
+    "displayName": "Thrift Fund",
+    "cordova": {
+        "platforms": [
+            "ios"
+        ],
+        "plugins": {
+            "cordova-plugin-media-capture": {
+                "CAMERA_USAGE_DESCRIPTION": "App would like to access the camera so you can photograph items",
+                "PHOTOLIBRARY_USAGE_DESCRIPTION": "App would like to access the library."
+            },
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-keyboard": {}
+        }
+    },
+    "dependencies": {
+        "cordova-ios": "~4.4.0",
+        "cordova-plugin-keyboard": "^1.1.5",
+        "cordova-plugin-media-capture": "*",
+        "cordova-plugin-whitelist": "1",
+        "ios-sim": "^6.0.0"
+    }
+}
